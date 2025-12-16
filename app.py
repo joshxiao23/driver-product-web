@@ -79,7 +79,7 @@ cfg = PreprocessConfig(
 
 sequence_length = st.sidebar.number_input(
     "Sequence length",
-    min_value=4, max_value=64, value=16, step=1,
+    min_value=4, max_value=64, value=8, step=1,
     help="Must match the sequence length expected by your trained model."
 )
 
