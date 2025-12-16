@@ -46,10 +46,24 @@ model_path = st.sidebar.text_input(
     help="Put your trained CNN+RNN model file inside /models. Example: models/seq_model.keras",
 )
 
+st.sidebar.subheader("Debug (model file)")
+try:
+    if os.path.exists(model_path):
+        st.sidebar.write("Exists:", True)
+        st.sidebar.write("Size (bytes):", os.path.getsize(model_path))
+        with open(model_path, "rb") as f:
+            head = f.read(120)
+        st.sidebar.code(head.decode("utf-8", errors="replace"))
+    else:
+        st.sidebar.write("Exists:", False)
+except Exception as e:
+    st.sidebar.error(str(e))
+
 class_names = st.sidebar.text_input(
     "Class names (comma-separated)",
     value=",".join(DEFAULT_CLASS_NAMES),
     help="Match the order used during training. Example: drowsy,notdrowsy",
+    
 )
 class_names = [c.strip() for c in class_names.split(",") if c.strip()]
 
