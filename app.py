@@ -45,8 +45,8 @@ st.sidebar.header("Model & Settings")
 
 model_path = st.sidebar.text_input(
     "Model path (.keras/.h5) inside repo",
-    value="models/seq_model.keras",
-    help="Put your trained CNN+RNN model file inside /models. Example: models/seq_model.keras",
+    value="models/seq_model.h5",
+    help="Put your trained CNN+RNN model file inside /models. Example: models/seq_model.h5",
 )
 
 st.sidebar.subheader("Debug (model file)")
