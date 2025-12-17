@@ -18,7 +18,7 @@ from tensorflow import keras
 def load_model_cached(model_path: str):
     if not model_path or not isinstance(model_path, str):
         raise ValueError("model_path must be a non-empty string")
-    model = keras.models.load_model(model_path, compile=False)
+    model = keras.models.load_model(model_path, compile=False, safe_mode=False)
     return model
 
 
