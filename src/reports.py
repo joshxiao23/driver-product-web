@@ -29,7 +29,7 @@ def build_report_markdown(timestamp: str, model_path: str, pred: Dict, class_nam
 ---
 
 ## Notes
-This is a **web report placeholder**. In Topic 8, you can extend it to PDF/DOCX and embed images.
+This is a **web report placeholder**. In Topic 8, it can be extend to PDF/DOCX and embed images.
 """
     return md.strip() + "\n"
 
