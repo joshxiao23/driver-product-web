@@ -5,6 +5,9 @@ from datetime import datetime
 import numpy as np
 import streamlit as st
 
+import tensorflow as tf
+st.sidebar.write("TensorFlow version:", tf.__version__)
+
 from src.preprocess import (
     PreprocessConfig,
     load_images_from_zip,
