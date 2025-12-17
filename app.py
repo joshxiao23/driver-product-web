@@ -216,7 +216,7 @@ with tabs[0]:
 # TAB 2
 # ===========================
 with tabs[1]:
-    st.subheader("Gradient-based saliency explanation (web-friendly)")
+    st.subheader("Gradient-based saliency explanation")
 
     if st.session_state.pred is None or st.session_state.seq_array is None or st.session_state.orig_frames is None:
         st.info("Run a prediction first in Tab 1.")
@@ -275,7 +275,7 @@ with tabs[2]:
 
     st.markdown(
         """
-This section is a **placeholder** for web-based report generation (required by your rubric).
+This section is a **placeholder** for web-based report generation.
 It shows **where** reports will appear, and demonstrates a report being requested, produced, and presented.
         """
     )
@@ -310,15 +310,10 @@ It shows **where** reports will appear, and demonstrates a report being requeste
 # TAB 4
 # ===========================
 with tabs[3]:
-    st.subheader("Multiple simultaneous users (how you demonstrate it)")
+    st.subheader("Multiple simultaneous users")
     st.markdown(
         """
 Streamlit apps are web-hosted, so multiple users can access the same URL at the same time.
-
-**How to document it for your submission:**
-- Open the deployed app URL on your laptop browser
-- Open the same URL on your phone (or another browser / incognito)
-- Take screenshots/photos showing both devices open at the same time
 
 This app uses `st.session_state`, so each user's uploads and results are isolated per session.
         """
