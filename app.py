@@ -81,7 +81,7 @@ st.sidebar.header("Preprocessing")
 cfg = PreprocessConfig(
     # IMPORTANT: default OFF to match your notebook's load_sequence_from_folder (no ROI crop).
     use_face_roi=st.sidebar.checkbox(
-        "Crop face ROI (Haar cascade)",
+        "Crop face ROI",
         value=False,
         help="Turn ON only if your model was trained on face-cropped frames."
     ),
