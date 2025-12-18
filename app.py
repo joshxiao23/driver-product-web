@@ -229,7 +229,7 @@ with tabs[1]:
             step=1
         )
 
-        explain_btn = st.button("Generate saliency overlay", use_container_width=True)
+        explain_btn = st.button("Generate Grad-CAM overlay", use_container_width=True)
 
         if explain_btn:
             try:
