@@ -85,9 +85,9 @@ cfg = PreprocessConfig(
         value=False,
         help="Turn ON only if your model was trained on face-cropped frames."
     ),
-    use_clahe=st.sidebar.checkbox("CLAHE (contrast enhancement)", value=False),
+    use_clahe=st.sidebar.checkbox("contrast enhancement", value=False),
     normalize_0_1=st.sidebar.checkbox(
-        "Normalize to [0,1]",
+        "Normalize",
         value=False,
         help="Turn ON only if your model was trained with 0–1 scaled pixels."
     ),
