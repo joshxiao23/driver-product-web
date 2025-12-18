@@ -76,7 +76,7 @@ threshold = st.sidebar.slider(
 )
 
 st.sidebar.divider()
-st.sidebar.header("Preprocessing (match your training)")
+st.sidebar.header("Preprocessing")
 
 cfg = PreprocessConfig(
     # IMPORTANT: default OFF to match your notebook's load_sequence_from_folder (no ROI crop).
