@@ -36,7 +36,7 @@ APP_TITLE = "Driver Behavior Detection (CNN+RNN)"
 DEFAULT_CLASS_NAMES = ["drowsy", "notdrowsy"]  # edit if yours are different
 
 st.title(APP_TITLE)
-st.caption("Upload a ZIP of frames (images). The app runs CNN+RNN inference, shows probabilities, a saliency explanation, and a report placeholder.")
+st.caption("Upload a ZIP of frames (images). The app runs CNN+RNN inference, shows probabilities, a Grad-CAM explanation, and a report placeholder.")
 
 # ---------------------------
 # Sidebar
@@ -126,7 +126,7 @@ with st.sidebar.expander("How to use this app"):
 - The app will preprocess, run CNN+RNN prediction, and show probabilities.
 
 **4) Explanation**  
-- Generates a gradient-based saliency overlay for a selected frame.
+- Generates a gradient-based Grad-CAM overlay for a selected frame.
 
 **5) Reports (placeholder)**  
 - Generates a simple placeholder report and allows download.
@@ -135,7 +135,7 @@ with st.sidebar.expander("How to use this app"):
 
 tabs = st.tabs([
     "1) Upload & Predict",
-    "2) Explanation (Saliency)",
+    "2) Explanation (Grad-CAM)",
     "3) Reports (Placeholder)",
     "4) Multi-user note",
 ])
@@ -216,7 +216,7 @@ with tabs[0]:
 # TAB 2
 # ===========================
 with tabs[1]:
-    st.subheader("Gradient-based saliency explanation")
+    st.subheader("Gradient-based Grad-CAM explanation")
 
     if st.session_state.pred is None or st.session_state.seq_array is None or st.session_state.orig_frames is None:
         st.info("Run a prediction first in Tab 1.")
@@ -251,7 +251,7 @@ with tabs[1]:
                 st.write("Original frame")
                 st.image(st.session_state.orig_frames[min(int(frame_idx), len(st.session_state.orig_frames)-1)], use_container_width=True)
             with c2:
-                st.write("Saliency overlay")
+                st.write("Grad-CAM overlay")
                 st.image(st.session_state.overlay, use_container_width=True)
 
             # Download overlay
@@ -262,7 +262,7 @@ with tabs[1]:
             st.download_button(
                 "Download explanation PNG",
                 data=buf.getvalue(),
-                file_name=f"saliency_overlay_frame{frame_idx}.png",
+                file_name=f"Grad-CAM_overlay_frame{frame_idx}.png",
                 mime="image/png",
                 use_container_width=True
             )
