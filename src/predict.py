@@ -1,10 +1,3 @@
-"""
-Prediction utilities for the CNN+RNN sequence model.
-
-Robust to different output formats:
-- Sigmoid binary output: (1,1)
-- Softmax multi-class output: (1,N)
-"""
 from __future__ import annotations
 
 from functools import lru_cache
