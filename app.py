@@ -312,5 +312,5 @@ It shows **where** reports will appear, and demonstrates a report being requeste
 with tabs[3]:
     st.subheader("Multiple simultaneous users")
     st.markdown(
-
+""" Note """
     )
