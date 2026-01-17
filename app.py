@@ -312,9 +312,5 @@ It shows **where** reports will appear, and demonstrates a report being requeste
 with tabs[3]:
     st.subheader("Multiple simultaneous users")
     st.markdown(
-        """
-Streamlit apps are web-hosted, so multiple users can access the same URL at the same time.
 
-This app uses `st.session_state`, so each user's uploads and results are isolated per session.
-        """
     )
