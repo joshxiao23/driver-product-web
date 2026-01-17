@@ -1,9 +1,3 @@
-"""
-Explanation utilities.
-
-This uses a gradient-based saliency heatmap for a chosen frame
-in the input sequence. This works reliably for CNN+RNN models on the web.
-"""
 from __future__ import annotations
 
 import numpy as np
