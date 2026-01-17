@@ -1,10 +1,3 @@
-"""
-Preprocessing utilities for Streamlit deployment.
-
-Default behavior is designed to match your notebook's load_sequence_from_folder:
-- resize only (no normalization) unless toggled
-- optional ROI crop / CLAHE if you trained that way
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass
